@@ -1,5 +1,5 @@
 {
-	"name": "toto/writer-link-extended",
+	"name": "hansipete/writer-link-extended",
 	"description": "Extends the Kirby Writer Link dialog to allow for toggling a button class",
 	"keywords": ["kirby", "kirby-plugin"],
 	"license": "MIT",
