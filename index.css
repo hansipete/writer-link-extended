@@ -1,0 +1,37 @@
+
+.k-button-group.k-dialog-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--spacing-3);
+	--button-height: var(--height-lg);
+}
+
+.k-dialog-fields {
+	padding-bottom: 0.5rem;
+	container-type: inline-size;
+}
+
+.k-writer-input a.button {
+	--button-color-back: var(--menu-color-back);
+
+	/* duplicate of k-button */
+	text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: var(--button-align);
+    gap: .5rem;
+    padding-left: var(--button-padding);
+    padding-right: var(--button-padding);
+    white-space: nowrap;
+    line-height: 1;
+    border-radius: var(--button-rounded);
+    background: var(--button-color-back);
+    height: var(--button-height);
+    width: var(--button-width);
+    color: var(--button-color-text);
+    font-variant-numeric: tabular-nums;
+    overflow-x: clip;
+    text-align: var(--button-align);
+    flex-shrink: 0;
+}

@@ -1,0 +1,22 @@
+{
+	"name": "toto/writer-link-extended",
+	"description": "Extends the Kirby Writer Link dialog to allow for toggling a button class",
+	"keywords": ["kirby", "kirby-plugin"],
+	"license": "MIT",
+	"type": "kirby-plugin",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Hans Kadel",
+			"email": "hans@toto.build"
+		}
+	],
+	"require": {
+		"getkirby/composer-installer": "^1.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"getkirby/composer-installer": true
+		}
+	}
+}
