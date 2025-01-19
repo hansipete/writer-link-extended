@@ -35,7 +35,7 @@ export default {
 					text: [window.panel.$t("no"), window.panel.$t("yes")]
 				},
 				class: {
-					label: 'Add "button" class',
+					label: 'Hinzufügen der "button" Klasse',
 					type: "toggle",
 					text: [window.panel.$t("no"), window.panel.$t("yes")]
 				}

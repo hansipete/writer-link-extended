@@ -111,7 +111,7 @@ window.panel.plugin("toto/writer-link-extended", {
 					inclusive: false,
 					parseDOM: [
 						{
-							tag: "a[href]:not([href^='mailto:'])",
+							tag: "a[href]",
 							getAttrs: (dom) => ({
 								href: dom.getAttribute("href"),
 								target: dom.getAttribute("target"),
