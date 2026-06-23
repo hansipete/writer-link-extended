@@ -29,17 +29,17 @@ export default {
 					type: "text",
 					icon: "title"
 				},
-				target: {
-					label: window.panel.$t("open.newWindow"),
-					type: "toggle",
-					text: [window.panel.$t("no"), window.panel.$t("yes")]
-				},
+			target: {
+				label: window.panel.$t("open.newWindow"),
+				type: "toggle",
+				text: [window.panel.$t("no"), window.panel.$t("yes")]
+			},
 			class: {
 				label: window.panel.$t('writer-link-extended.linkClass.label').replace('{class}', window.panel.$t('writer-link-extended.linkClass')),
 				type: "toggle",
 				text: [window.panel.$t("no"), window.panel.$t("yes")]
 			}
-			})
+		})
 		},
 		// eslint-disable-next-line vue/require-prop-types
 		size: {
