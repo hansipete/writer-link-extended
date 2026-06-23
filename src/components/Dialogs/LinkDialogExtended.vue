@@ -77,20 +77,22 @@ export default {
 			const linkClass = window.panel.$t('writer-link-extended.linkClass');
 
 			this.$emit("submit", {
-				...this.values,
-				href: href,
-				target: this.values.target ? "_blank" : null,
-				class: this.values.class ? linkClass : null
-			});
+					...this.values,
+					href: href,
+					target: this.values.target ? "_blank" : null,
+					class: this.values.class
+						? [linkClass, "k-writer-link-button"].join(" ")
+						: null
+				});
 		}
 	}
 };
 </script>
 
 <style>
-/* Targets the default linkClass value ("button"). Adjust this selector if you
-   change the toto.writer-link-extended.linkClass option in config.php. */
-.k-writer-input a.button {
+/* Uses a fixed helper class for panel preview styling, independent of the
+   configured toto.writer-link-extended.linkClass option in config.php. */
+.k-writer-input a.k-writer-link-button {
 	--button-color-back: var(--menu-color-back);
 
 	/* duplicate of k-button */
