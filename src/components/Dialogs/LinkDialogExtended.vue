@@ -34,11 +34,11 @@ export default {
 					type: "toggle",
 					text: [window.panel.$t("no"), window.panel.$t("yes")]
 				},
-				class: {
-					label: 'Hinzufügen der "button" Klasse',
-					type: "toggle",
-					text: [window.panel.$t("no"), window.panel.$t("yes")]
-				}
+			class: {
+				label: window.panel.$t('writer-link-extended.linkClass.label').replace('{class}', window.panel.$t('writer-link-extended.linkClass')),
+				type: "toggle",
+				text: [window.panel.$t("no"), window.panel.$t("yes")]
+			}
 			})
 		},
 		// eslint-disable-next-line vue/require-prop-types
@@ -51,13 +51,14 @@ export default {
 		}
 	},
 	data() {
+		const linkClass = window.panel.$t('writer-link-extended.linkClass');
 		return {
 			values: {
 				href: "",
 				title: null,
 				...this.value,
 				target: Boolean(this.value.target ?? false),
-				class: Boolean(this.value.class ?? false),
+				class: this.value.class === linkClass,
 			}
 		};
 	},
@@ -73,12 +74,13 @@ export default {
 			}
 
 			const href = this.values.href.replace(/(file|page):\/\//, permalink);
+			const linkClass = window.panel.$t('writer-link-extended.linkClass');
 
 			this.$emit("submit", {
 				...this.values,
 				href: href,
 				target: this.values.target ? "_blank" : null,
-				class: this.values.class ? "button" : null
+				class: this.values.class ? linkClass : null
 			});
 		}
 	}
@@ -86,6 +88,8 @@ export default {
 </script>
 
 <style>
+/* Targets the default linkClass value ("button"). Adjust this selector if you
+   change the toto.writer-link-extended.linkClass option in config.php. */
 .k-writer-input a.button {
 	--button-color-back: var(--menu-color-back);
 
